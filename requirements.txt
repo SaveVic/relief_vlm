@@ -1,0 +1,18 @@
+# Core pipeline
+replicate>=1.0.7,<2
+pydantic>=2.6,<3
+numpy>=1.24
+opencv-python-headless>=4.8
+Pillow>=10.0
+httpx>=0.27
+tqdm>=4.66
+PyYAML>=6.0
+
+# Dataset download from Google Drive (`relief fetch`)
+gdown>=5.1
+
+# Plots for inspection and paper figures (scripts/08_example_figure.py)
+matplotlib>=3.7
+
+# Paired tests (Wilcoxon) in evaluation
+scipy>=1.10

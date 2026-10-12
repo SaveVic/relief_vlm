@@ -1,0 +1,1596 @@
+{
+  "n_rows": 1104,
+  "models": [
+    "google/gemini-3-flash",
+    "openai/gpt-4.1",
+    "openai/gpt-4.1-mini",
+    "qwen/qwen3-7-plus"
+  ],
+  "conditions": [
+    "RGB_DEPTH",
+    "RGB_FUSION_CAVITY",
+    "RGB_SAJA"
+  ],
+  "aggregate": [
+    {
+      "model": "google/gemini-3-flash",
+      "condition": "RGB_DEPTH",
+      "n_panels": 92,
+      "parse_fail_rate": 0.010869565217391353,
+      "unusable_rate": 0.0,
+      "partial_rate": 0.010869565217391304,
+      "repair_rate": 0.043478260869565216,
+      "count_mae": 8.282608695652174,
+      "count_bias": -8.282608695652174,
+      "recall_grid": 0.3954690851910466,
+      "precision_grid": 0.7861369910282952,
+      "recall_iou30": 0.3653426142425031,
+      "recall_iou50": 0.30701120727695796,
+      "hallucination_rate": 0.21386300897170457,
+      "ece": 0.13580031695721081,
+      "auroc": 0.44370992366412215,
+      "f1_grid": 0.5262208496278769,
+      "source_share": {
+        "RGB": 0.544,
+        "DEPTH": 0.456
+      }
+    },
+    {
+      "model": "google/gemini-3-flash",
+      "condition": "RGB_FUSION_CAVITY",
+      "n_panels": 92,
+      "parse_fail_rate": 0.07608695652173914,
+      "unusable_rate": 0.05434782608695654,
+      "partial_rate": 0.021739130434782608,
+      "repair_rate": 0.10869565217391304,
+      "count_mae": 8.467391304347826,
+      "count_bias": -8.402173913043478,
+      "recall_grid": 0.36750253859559046,
+      "precision_grid": 0.7463754955134265,
+      "recall_iou30": 0.3459410649842388,
+      "recall_iou50": 0.282553335819258,
+      "hallucination_rate": 0.2536245044865734,
+      "ece": 0.12021138211382126,
+      "auroc": 0.5175666199158485,
+      "f1_grid": 0.4925043513693713,
+      "source_share": {
+        "CAVITY": 0.355,
+        "FUSION": 0.333,
+        "RGB": 0.312
+      }
+    },
+    {
+      "model": "google/gemini-3-flash",
+      "condition": "RGB_SAJA",
+      "n_panels": 92,
+      "parse_fail_rate": 0.03260869565217395,
+      "unusable_rate": 0.03260869565217395,
+      "partial_rate": 0.0,
+      "repair_rate": 0.09782608695652174,
+      "count_mae": 8.826086956521738,
+      "count_bias": -8.826086956521738,
+      "recall_grid": 0.35221663720816393,
+      "precision_grid": 0.7736607649528997,
+      "recall_iou30": 0.33443215801077086,
+      "recall_iou50": 0.2927218493112372,
+      "hallucination_rate": 0.2263392350471002,
+      "ece": 0.14400000000000002,
+      "auroc": 0.4008977777777778,
+      "f1_grid": 0.4840601515734549,
+      "source_share": {
+        "RGB": 1.0
+      }
+    },
+    {
+      "model": "openai/gpt-4.1",
+      "condition": "RGB_DEPTH",
+      "n_panels": 92,
+      "parse_fail_rate": 0.0,
+      "unusable_rate": 0.0,
+      "partial_rate": 0.0,
+      "repair_rate": 0.0,
+      "count_mae": 8.51086956521739,
+      "count_bias": -8.51086956521739,
+      "recall_grid": 0.30213133173091355,
+      "precision_grid": 0.7101037549407114,
+      "recall_iou30": 0.186556388715391,
+      "recall_iou50": 0.05527286863333962,
+      "hallucination_rate": 0.28989624505928857,
+      "ece": 0.15618249534450654,
+      "auroc": 0.5213220857874946,
+      "f1_grid": 0.4239027000196427,
+      "source_share": {
+        "RGB": 0.576,
+        "DEPTH": 0.424
+      }
+    },
+    {
+      "model": "openai/gpt-4.1",
+      "condition": "RGB_FUSION_CAVITY",
+      "n_panels": 92,
+      "parse_fail_rate": 0.0,
+      "unusable_rate": 0.0,
+      "partial_rate": 0.0,
+      "repair_rate": 0.0,
+      "count_mae": 7.858695652173913,
+      "count_bias": -7.836956521739131,
+      "recall_grid": 0.3072349866401405,
+      "precision_grid": 0.6797905295187904,
+      "recall_iou30": 0.1972214796731374,
+      "recall_iou50": 0.05288034570508248,
+      "hallucination_rate": 0.32020947048120957,
+      "ece": 0.19636678200692043,
+      "auroc": 0.5556361909929463,
+      "f1_grid": 0.4232016920242813,
+      "source_share": {
+        "CAVITY": 0.354,
+        "FUSION": 0.344,
+        "RGB": 0.302
+      }
+    },
+    {
+      "model": "openai/gpt-4.1",
+      "condition": "RGB_SAJA",
+      "n_panels": 92,
+      "parse_fail_rate": 0.0,
+      "unusable_rate": 0.0,
+      "partial_rate": 0.0,
+      "repair_rate": 0.0,
+      "count_mae": 8.978260869565217,
+      "count_bias": -8.956521739130435,
+      "recall_grid": 0.26074014504695325,
+      "precision_grid": 0.7147412671869193,
+      "recall_iou30": 0.15013311284218533,
+      "recall_iou50": 0.042749364141453146,
+      "hallucination_rate": 0.2852587328130806,
+      "ece": 0.11857451403887681,
+      "auroc": 0.48353539390709654,
+      "f1_grid": 0.38209183555961007,
+      "source_share": {
+        "RGB": 1.0
+      }
+    },
+    {
+      "model": "openai/gpt-4.1-mini",
+      "condition": "RGB_DEPTH",
+      "n_panels": 92,
+      "parse_fail_rate": 0.0,
+      "unusable_rate": 0.0,
+      "partial_rate": 0.0,
+      "repair_rate": 0.010869565217391304,
+      "count_mae": 9.98913043478261,
+      "count_bias": -9.98913043478261,
+      "recall_grid": 0.26547278471533536,
+      "precision_grid": 0.7197981366459625,
+      "recall_iou30": 0.18153691360985572,
+      "recall_iou50": 0.04830393072528766,
+      "hallucination_rate": 0.28020186335403724,
+      "ece": 0.15534934497816597,
+      "auroc": 0.49681681681681683,
+      "f1_grid": 0.3878868474151219,
+      "source_share": {
+        "RGB": 0.526,
+        "DEPTH": 0.474
+      }
+    },
+    {
+      "model": "openai/gpt-4.1-mini",
+      "condition": "RGB_FUSION_CAVITY",
+      "n_panels": 92,
+      "parse_fail_rate": 0.010869565217391353,
+      "unusable_rate": 0.0,
+      "partial_rate": 0.010869565217391304,
+      "repair_rate": 0.03260869565217391,
+      "count_mae": 9.98913043478261,
+      "count_bias": -9.98913043478261,
+      "recall_grid": 0.2652992627608285,
+      "precision_grid": 0.7453416149068322,
+      "recall_iou30": 0.18088190648096308,
+      "recall_iou50": 0.056915857728066746,
+      "hallucination_rate": 0.25465838509316774,
+      "ece": 0.15917225950782998,
+      "auroc": 0.5402017654476671,
+      "f1_grid": 0.39131324550434876,
+      "source_share": {
+        "RGB": 0.35,
+        "CAVITY": 0.35,
+        "FUSION": 0.3
+      }
+    },
+    {
+      "model": "openai/gpt-4.1-mini",
+      "condition": "RGB_SAJA",
+      "n_panels": 92,
+      "parse_fail_rate": 0.0,
+      "unusable_rate": 0.0,
+      "partial_rate": 0.0,
+      "repair_rate": 0.021739130434782608,
+      "count_mae": 10.173913043478262,
+      "count_bias": -10.173913043478262,
+      "recall_grid": 0.25068204239089914,
+      "precision_grid": 0.8007116977225673,
+      "recall_iou30": 0.14883858137189176,
+      "recall_iou50": 0.04127378593942236,
+      "hallucination_rate": 0.19928830227743272,
+      "ece": 0.15368020304568536,
+      "auroc": 0.4185853748388285,
+      "f1_grid": 0.3818246886836425,
+      "source_share": {
+        "RGB": 1.0
+      }
+    },
+    {
+      "model": "qwen/qwen3-7-plus",
+      "condition": "RGB_DEPTH",
+      "n_panels": 92,
+      "parse_fail_rate": 0.0,
+      "unusable_rate": 0.0,
+      "partial_rate": 0.0,
+      "repair_rate": 0.17391304347826086,
+      "count_mae": 8.66304347826087,
+      "count_bias": -8.576086956521738,
+      "recall_grid": 0.32155211297295827,
+      "precision_grid": 0.6876854727398206,
+      "recall_iou30": 0.2875098056680623,
+      "recall_iou50": 0.2175252199097027,
+      "hallucination_rate": 0.3123145272601794,
+      "ece": 0.2263111888111889,
+      "auroc": 0.3845414370982553,
+      "f1_grid": 0.43820547302372853,
+      "source_share": {
+        "RGB": 0.588,
+        "DEPTH": 0.412
+      }
+    },
+    {
+      "model": "qwen/qwen3-7-plus",
+      "condition": "RGB_FUSION_CAVITY",
+      "n_panels": 92,
+      "parse_fail_rate": 0.021739130434782594,
+      "unusable_rate": 0.0,
+      "partial_rate": 0.021739130434782608,
+      "repair_rate": 0.11956521739130435,
+      "count_mae": 8.445652173913043,
+      "count_bias": -8.358695652173912,
+      "recall_grid": 0.34683600033490963,
+      "precision_grid": 0.6978503983938766,
+      "recall_iou30": 0.3054672963524211,
+      "recall_iou50": 0.22638502852971165,
+      "hallucination_rate": 0.3021496016061233,
+      "ece": 0.2160749185667754,
+      "auroc": 0.41486696174196175,
+      "f1_grid": 0.463372819451997,
+      "source_share": {
+        "RGB": 0.381,
+        "CAVITY": 0.317,
+        "FUSION": 0.302
+      }
+    },
+    {
+      "model": "qwen/qwen3-7-plus",
+      "condition": "RGB_SAJA",
+      "n_panels": 92,
+      "parse_fail_rate": 0.04347826086956519,
+      "unusable_rate": 0.0,
+      "partial_rate": 0.043478260869565216,
+      "repair_rate": 0.4782608695652174,
+      "count_mae": 8.695652173913043,
+      "count_bias": -8.630434782608695,
+      "recall_grid": 0.30822755572193616,
+      "precision_grid": 0.6993290827529958,
+      "recall_iou30": 0.2651694832938235,
+      "recall_iou50": 0.19743733330767183,
+      "hallucination_rate": 0.3006709172470042,
+      "ece": 0.19624772313296904,
+      "auroc": 0.3717690845739626,
+      "f1_grid": 0.4278717157746809,
+      "source_share": {
+        "RGB": 1.0
+      }
+    }
+  ],
+  "aggregate_parsed_only": [
+    {
+      "model": "google/gemini-3-flash",
+      "condition": "RGB_DEPTH",
+      "n_panels": 92,
+      "parse_fail_rate": 0.010869565217391353,
+      "unusable_rate": 0.0,
+      "partial_rate": 0.010869565217391304,
+      "repair_rate": 0.043478260869565216,
+      "count_mae": 8.263736263736265,
+      "count_bias": -8.263736263736265,
+      "recall_grid": 0.3972292496695519,
+      "precision_grid": 0.7859846502703646,
+      "recall_iou30": 0.3680645434229314,
+      "recall_iou50": 0.3097385443963556,
+      "hallucination_rate": 0.2140153497296354,
+      "ece": 0.12043130990415343,
+      "auroc": 0.44787531017369725,
+      "f1_grid": 0.5277424359104239,
+      "source_share": {
+        "RGB": 0.543,
+        "DEPTH": 0.457
+      }
+    },
+    {
+      "model": "google/gemini-3-flash",
+      "condition": "RGB_FUSION_CAVITY",
+      "n_panels": 92,
+      "parse_fail_rate": 0.07608695652173914,
+      "unusable_rate": 0.05434782608695654,
+      "partial_rate": 0.021739130434782608,
+      "repair_rate": 0.10869565217391304,
+      "count_mae": 7.776470588235294,
+      "count_bias": -7.705882352941177,
+      "recall_grid": 0.3890987228886019,
+      "precision_grid": 0.7456366182836771,
+      "recall_iou30": 0.3669999886021359,
+      "recall_iou50": 0.2983920935059214,
+      "hallucination_rate": 0.2543633817163229,
+      "ece": 0.11747068676716925,
+      "auroc": 0.5214192379651352,
+      "f1_grid": 0.5113549307690186,
+      "source_share": {
+        "CAVITY": 0.354,
+        "FUSION": 0.333,
+        "RGB": 0.313
+      }
+    },
+    {
+      "model": "google/gemini-3-flash",
+      "condition": "RGB_SAJA",
+      "n_panels": 92,
+      "parse_fail_rate": 0.03260869565217395,
+      "unusable_rate": 0.03260869565217395,
+      "partial_rate": 0.0,
+      "repair_rate": 0.09782608695652174,
+      "count_mae": 8.685393258426966,
+      "count_bias": -8.685393258426966,
+      "recall_grid": 0.36408910812529316,
+      "precision_grid": 0.7736607649528997,
+      "recall_iou30": 0.34570515210102165,
+      "recall_iou50": 0.30258887793970596,
+      "hallucination_rate": 0.2263392350471002,
+      "ece": 0.14400000000000002,
+      "auroc": 0.4008977777777778,
+      "f1_grid": 0.49515533170949344,
+      "source_share": {
+        "RGB": 1.0
+      }
+    },
+    {
+      "model": "openai/gpt-4.1",
+      "condition": "RGB_DEPTH",
+      "n_panels": 92,
+      "parse_fail_rate": 0.0,
+      "unusable_rate": 0.0,
+      "partial_rate": 0.0,
+      "repair_rate": 0.0,
+      "count_mae": 8.51086956521739,
+      "count_bias": -8.51086956521739,
+      "recall_grid": 0.30213133173091355,
+      "precision_grid": 0.7101037549407114,
+      "recall_iou30": 0.186556388715391,
+      "recall_iou50": 0.05527286863333962,
+      "hallucination_rate": 0.28989624505928857,
+      "ece": 0.15618249534450654,
+      "auroc": 0.5213220857874946,
+      "f1_grid": 0.4239027000196427,
+      "source_share": {
+        "RGB": 0.576,
+        "DEPTH": 0.424
+      }
+    },
+    {
+      "model": "openai/gpt-4.1",
+      "condition": "RGB_FUSION_CAVITY",
+      "n_panels": 92,
+      "parse_fail_rate": 0.0,
+      "unusable_rate": 0.0,
+      "partial_rate": 0.0,
+      "repair_rate": 0.0,
+      "count_mae": 7.858695652173913,
+      "count_bias": -7.836956521739131,
+      "recall_grid": 0.3072349866401405,
+      "precision_grid": 0.6797905295187904,
+      "recall_iou30": 0.1972214796731374,
+      "recall_iou50": 0.05288034570508248,
+      "hallucination_rate": 0.32020947048120957,
+      "ece": 0.19636678200692043,
+      "auroc": 0.5556361909929463,
+      "f1_grid": 0.4232016920242813,
+      "source_share": {
+        "CAVITY": 0.354,
+        "FUSION": 0.344,
+        "RGB": 0.302
+      }
+    },
+    {
+      "model": "openai/gpt-4.1",
+      "condition": "RGB_SAJA",
+      "n_panels": 92,
+      "parse_fail_rate": 0.0,
+      "unusable_rate": 0.0,
+      "partial_rate": 0.0,
+      "repair_rate": 0.0,
+      "count_mae": 8.978260869565217,
+      "count_bias": -8.956521739130435,
+      "recall_grid": 0.26074014504695325,
+      "precision_grid": 0.7147412671869193,
+      "recall_iou30": 0.15013311284218533,
+      "recall_iou50": 0.042749364141453146,
+      "hallucination_rate": 0.2852587328130806,
+      "ece": 0.11857451403887681,
+      "auroc": 0.48353539390709654,
+      "f1_grid": 0.38209183555961007,
+      "source_share": {
+        "RGB": 1.0
+      }
+    },
+    {
+      "model": "openai/gpt-4.1-mini",
+      "condition": "RGB_DEPTH",
+      "n_panels": 92,
+      "parse_fail_rate": 0.0,
+      "unusable_rate": 0.0,
+      "partial_rate": 0.0,
+      "repair_rate": 0.010869565217391304,
+      "count_mae": 9.98913043478261,
+      "count_bias": -9.98913043478261,
+      "recall_grid": 0.26547278471533536,
+      "precision_grid": 0.7197981366459625,
+      "recall_iou30": 0.18153691360985572,
+      "recall_iou50": 0.04830393072528766,
+      "hallucination_rate": 0.28020186335403724,
+      "ece": 0.15534934497816597,
+      "auroc": 0.49681681681681683,
+      "f1_grid": 0.3878868474151219,
+      "source_share": {
+        "RGB": 0.526,
+        "DEPTH": 0.474
+      }
+    },
+    {
+      "model": "openai/gpt-4.1-mini",
+      "condition": "RGB_FUSION_CAVITY",
+      "n_panels": 92,
+      "parse_fail_rate": 0.010869565217391353,
+      "unusable_rate": 0.0,
+      "partial_rate": 0.010869565217391304,
+      "repair_rate": 0.03260869565217391,
+      "count_mae": 9.978021978021978,
+      "count_bias": -9.978021978021978,
+      "recall_grid": 0.2661214943243959,
+      "precision_grid": 0.7480376766091051,
+      "recall_iou30": 0.18182304726385176,
+      "recall_iou50": 0.05754130671408946,
+      "hallucination_rate": 0.25196232339089486,
+      "ece": 0.1548974943052392,
+      "auroc": 0.5372115740007393,
+      "f1_grid": 0.39257921244636135,
+      "source_share": {
+        "RGB": 0.35,
+        "CAVITY": 0.35,
+        "FUSION": 0.3
+      }
+    },
+    {
+      "model": "openai/gpt-4.1-mini",
+      "condition": "RGB_SAJA",
+      "n_panels": 92,
+      "parse_fail_rate": 0.0,
+      "unusable_rate": 0.0,
+      "partial_rate": 0.0,
+      "repair_rate": 0.021739130434782608,
+      "count_mae": 10.173913043478262,
+      "count_bias": -10.173913043478262,
+      "recall_grid": 0.25068204239089914,
+      "precision_grid": 0.8007116977225673,
+      "recall_iou30": 0.14883858137189176,
+      "recall_iou50": 0.04127378593942236,
+      "hallucination_rate": 0.19928830227743272,
+      "ece": 0.15368020304568536,
+      "auroc": 0.4185853748388285,
+      "f1_grid": 0.3818246886836425,
+      "source_share": {
+        "RGB": 1.0
+      }
+    },
+    {
+      "model": "qwen/qwen3-7-plus",
+      "condition": "RGB_DEPTH",
+      "n_panels": 92,
+      "parse_fail_rate": 0.0,
+      "unusable_rate": 0.0,
+      "partial_rate": 0.0,
+      "repair_rate": 0.17391304347826086,
+      "count_mae": 8.66304347826087,
+      "count_bias": -8.576086956521738,
+      "recall_grid": 0.32155211297295827,
+      "precision_grid": 0.6876854727398206,
+      "recall_iou30": 0.2875098056680623,
+      "recall_iou50": 0.2175252199097027,
+      "hallucination_rate": 0.3123145272601794,
+      "ece": 0.2263111888111889,
+      "auroc": 0.3845414370982553,
+      "f1_grid": 0.43820547302372853,
+      "source_share": {
+        "RGB": 0.588,
+        "DEPTH": 0.412
+      }
+    },
+    {
+      "model": "qwen/qwen3-7-plus",
+      "condition": "RGB_FUSION_CAVITY",
+      "n_panels": 92,
+      "parse_fail_rate": 0.021739130434782594,
+      "unusable_rate": 0.0,
+      "partial_rate": 0.021739130434782608,
+      "repair_rate": 0.11956521739130435,
+      "count_mae": 8.433333333333334,
+      "count_bias": -8.344444444444445,
+      "recall_grid": 0.3463928822136971,
+      "precision_grid": 0.6960742344075678,
+      "recall_iou30": 0.3026063356865685,
+      "recall_iou50": 0.22443481278943622,
+      "hallucination_rate": 0.30392576559243223,
+      "ece": 0.20648241206030166,
+      "auroc": 0.40989783057574214,
+      "f1_grid": 0.4625856421689485,
+      "source_share": {
+        "RGB": 0.382,
+        "CAVITY": 0.317,
+        "FUSION": 0.301
+      }
+    },
+    {
+      "model": "qwen/qwen3-7-plus",
+      "condition": "RGB_SAJA",
+      "n_panels": 92,
+      "parse_fail_rate": 0.04347826086956519,
+      "unusable_rate": 0.0,
+      "partial_rate": 0.043478260869565216,
+      "repair_rate": 0.4782608695652174,
+      "count_mae": 8.306818181818182,
+      "count_bias": -8.238636363636363,
+      "recall_grid": 0.3115748663971511,
+      "precision_grid": 0.695131919847829,
+      "recall_iou30": 0.2687769037588914,
+      "recall_iou50": 0.19985995907639953,
+      "hallucination_rate": 0.3048680801521711,
+      "ece": 0.19685009487666028,
+      "auroc": 0.37972552638774953,
+      "f1_grid": 0.4302854376552832,
+      "source_share": {
+        "RGB": 1.0
+      }
+    }
+  ],
+  "tests": [
+    {
+      "model": "google/gemini-3-flash",
+      "metric": "recall_grid",
+      "cond_a": "RGB_DEPTH",
+      "cond_b": "RGB_SAJA",
+      "n_panels": 46,
+      "mean_a": 0.39546908519104645,
+      "mean_b": 0.35221663720816393,
+      "mean_diff": 0.043252447982882566,
+      "ci95": [
+        0.010870338981063831,
+        0.08260868965196243
+      ],
+      "boot_p_two_sided": 0.006,
+      "wilcoxon_stat": 215.0,
+      "wilcoxon_p": 0.024095194026990622
+    },
+    {
+      "model": "google/gemini-3-flash",
+      "metric": "recall_grid",
+      "cond_a": "RGB_FUSION_CAVITY",
+      "cond_b": "RGB_SAJA",
+      "n_panels": 46,
+      "mean_a": 0.36750253859559046,
+      "mean_b": 0.35221663720816393,
+      "mean_diff": 0.015285901387426509,
+      "ci95": [
+        -0.01900264740918178,
+        0.05078823488233462
+      ],
+      "boot_p_two_sided": 0.3968,
+      "wilcoxon_stat": 281.0,
+      "wilcoxon_p": 0.413906638794419
+    },
+    {
+      "model": "openai/gpt-4.1",
+      "metric": "recall_grid",
+      "cond_a": "RGB_DEPTH",
+      "cond_b": "RGB_SAJA",
+      "n_panels": 46,
+      "mean_a": 0.30213133173091367,
+      "mean_b": 0.26074014504695336,
+      "mean_diff": 0.04139118668396031,
+      "ci95": [
+        0.012914951416539321,
+        0.07186333253524113
+      ],
+      "boot_p_two_sided": 0.002,
+      "wilcoxon_stat": 169.5,
+      "wilcoxon_p": 0.01714585644847988
+    },
+    {
+      "model": "openai/gpt-4.1",
+      "metric": "recall_grid",
+      "cond_a": "RGB_FUSION_CAVITY",
+      "cond_b": "RGB_SAJA",
+      "n_panels": 46,
+      "mean_a": 0.3072349866401406,
+      "mean_b": 0.26074014504695336,
+      "mean_diff": 0.04649484159318723,
+      "ci95": [
+        0.021807241291646046,
+        0.07321581279426584
+      ],
+      "boot_p_two_sided": 0.0,
+      "wilcoxon_stat": 89.0,
+      "wilcoxon_p": 0.0010645514160405774
+    },
+    {
+      "model": "openai/gpt-4.1-mini",
+      "metric": "recall_grid",
+      "cond_a": "RGB_DEPTH",
+      "cond_b": "RGB_SAJA",
+      "n_panels": 46,
+      "mean_a": 0.26547278471533536,
+      "mean_b": 0.25068204239089925,
+      "mean_diff": 0.01479074232443619,
+      "ci95": [
+        -0.015675486226254077,
+        0.044601151518379636
+      ],
+      "boot_p_two_sided": 0.313,
+      "wilcoxon_stat": 235.0,
+      "wilcoxon_p": 0.1900020044801023
+    },
+    {
+      "model": "openai/gpt-4.1-mini",
+      "metric": "recall_grid",
+      "cond_a": "RGB_FUSION_CAVITY",
+      "cond_b": "RGB_SAJA",
+      "n_panels": 46,
+      "mean_a": 0.2652992627608286,
+      "mean_b": 0.25068204239089925,
+      "mean_diff": 0.014617220369929351,
+      "ci95": [
+        -0.014790969190880012,
+        0.04381086701718473
+      ],
+      "boot_p_two_sided": 0.2996,
+      "wilcoxon_stat": 131.0,
+      "wilcoxon_p": 0.16322543171035764
+    },
+    {
+      "model": "qwen/qwen3-7-plus",
+      "metric": "recall_grid",
+      "cond_a": "RGB_DEPTH",
+      "cond_b": "RGB_SAJA",
+      "n_panels": 46,
+      "mean_a": 0.3215521129729583,
+      "mean_b": 0.3082275557219362,
+      "mean_diff": 0.013324557251022082,
+      "ci95": [
+        -0.01115332151289853,
+        0.0386997081579148
+      ],
+      "boot_p_two_sided": 0.301,
+      "wilcoxon_stat": 222.5,
+      "wilcoxon_p": 0.299949850368598
+    },
+    {
+      "model": "qwen/qwen3-7-plus",
+      "metric": "recall_grid",
+      "cond_a": "RGB_FUSION_CAVITY",
+      "cond_b": "RGB_SAJA",
+      "n_panels": 46,
+      "mean_a": 0.3468360003349097,
+      "mean_b": 0.3082275557219362,
+      "mean_diff": 0.03860844461297343,
+      "ci95": [
+        0.014406924171012499,
+        0.06602455046308128
+      ],
+      "boot_p_two_sided": 0.0008,
+      "wilcoxon_stat": 119.0,
+      "wilcoxon_p": 0.006697468376199825
+    }
+  ],
+  "recall_vs_salience": {
+    "google/gemini-3-flash": {
+      "RGB_DEPTH": [
+        {
+          "bin": 0,
+          "range": [
+            0.33687272667884827,
+            0.7384116649627686
+          ],
+          "n": 298,
+          "recall": 0.31208053691275167
+        },
+        {
+          "bin": 1,
+          "range": [
+            0.7384116649627686,
+            0.812336802482605
+          ],
+          "n": 298,
+          "recall": 0.40604026845637586
+        },
+        {
+          "bin": 2,
+          "range": [
+            0.812336802482605,
+            0.8770107626914978
+          ],
+          "n": 300,
+          "recall": 0.39
+        },
+        {
+          "bin": 3,
+          "range": [
+            0.8770107626914978,
+            0.9577503204345703
+          ],
+          "n": 298,
+          "recall": 0.40268456375838924
+        },
+        {
+          "bin": 4,
+          "range": [
+            0.9577503204345703,
+            2.155296565102173
+          ],
+          "n": 300,
+          "recall": 0.16333333333333333
+        }
+      ],
+      "RGB_FUSION_CAVITY": [
+        {
+          "bin": 0,
+          "range": [
+            0.33687272667884827,
+            0.7384116649627686
+          ],
+          "n": 298,
+          "recall": 0.28187919463087246
+        },
+        {
+          "bin": 1,
+          "range": [
+            0.7384116649627686,
+            0.812336802482605
+          ],
+          "n": 298,
+          "recall": 0.37583892617449666
+        },
+        {
+          "bin": 2,
+          "range": [
+            0.812336802482605,
+            0.8770107626914978
+          ],
+          "n": 300,
+          "recall": 0.35333333333333333
+        },
+        {
+          "bin": 3,
+          "range": [
+            0.8770107626914978,
+            0.9577503204345703
+          ],
+          "n": 298,
+          "recall": 0.3825503355704698
+        },
+        {
+          "bin": 4,
+          "range": [
+            0.9577503204345703,
+            2.155296565102173
+          ],
+          "n": 300,
+          "recall": 0.14666666666666667
+        }
+      ],
+      "RGB_SAJA": [
+        {
+          "bin": 0,
+          "range": [
+            0.33687272667884827,
+            0.7384116649627686
+          ],
+          "n": 298,
+          "recall": 0.2953020134228188
+        },
+        {
+          "bin": 1,
+          "range": [
+            0.7384116649627686,
+            0.812336802482605
+          ],
+          "n": 298,
+          "recall": 0.3523489932885906
+        },
+        {
+          "bin": 2,
+          "range": [
+            0.812336802482605,
+            0.8770107626914978
+          ],
+          "n": 300,
+          "recall": 0.32666666666666666
+        },
+        {
+          "bin": 3,
+          "range": [
+            0.8770107626914978,
+            0.9577503204345703
+          ],
+          "n": 298,
+          "recall": 0.40268456375838924
+        },
+        {
+          "bin": 4,
+          "range": [
+            0.9577503204345703,
+            2.155296565102173
+          ],
+          "n": 300,
+          "recall": 0.13
+        }
+      ]
+    },
+    "openai/gpt-4.1": {
+      "RGB_DEPTH": [
+        {
+          "bin": 0,
+          "range": [
+            0.33687272667884827,
+            0.7384116649627686
+          ],
+          "n": 298,
+          "recall": 0.2483221476510067
+        },
+        {
+          "bin": 1,
+          "range": [
+            0.7384116649627686,
+            0.812336802482605
+          ],
+          "n": 298,
+          "recall": 0.3053691275167785
+        },
+        {
+          "bin": 2,
+          "range": [
+            0.812336802482605,
+            0.8770107626914978
+          ],
+          "n": 300,
+          "recall": 0.26
+        },
+        {
+          "bin": 3,
+          "range": [
+            0.8770107626914978,
+            0.9577503204345703
+          ],
+          "n": 298,
+          "recall": 0.3422818791946309
+        },
+        {
+          "bin": 4,
+          "range": [
+            0.9577503204345703,
+            2.155296565102173
+          ],
+          "n": 300,
+          "recall": 0.11
+        }
+      ],
+      "RGB_FUSION_CAVITY": [
+        {
+          "bin": 0,
+          "range": [
+            0.33687272667884827,
+            0.7384116649627686
+          ],
+          "n": 298,
+          "recall": 0.22818791946308725
+        },
+        {
+          "bin": 1,
+          "range": [
+            0.7384116649627686,
+            0.812336802482605
+          ],
+          "n": 298,
+          "recall": 0.31543624161073824
+        },
+        {
+          "bin": 2,
+          "range": [
+            0.812336802482605,
+            0.8770107626914978
+          ],
+          "n": 300,
+          "recall": 0.2833333333333333
+        },
+        {
+          "bin": 3,
+          "range": [
+            0.8770107626914978,
+            0.9577503204345703
+          ],
+          "n": 298,
+          "recall": 0.3624161073825503
+        },
+        {
+          "bin": 4,
+          "range": [
+            0.9577503204345703,
+            2.155296565102173
+          ],
+          "n": 300,
+          "recall": 0.11
+        }
+      ],
+      "RGB_SAJA": [
+        {
+          "bin": 0,
+          "range": [
+            0.33687272667884827,
+            0.7384116649627686
+          ],
+          "n": 298,
+          "recall": 0.18791946308724833
+        },
+        {
+          "bin": 1,
+          "range": [
+            0.7384116649627686,
+            0.812336802482605
+          ],
+          "n": 298,
+          "recall": 0.23154362416107382
+        },
+        {
+          "bin": 2,
+          "range": [
+            0.812336802482605,
+            0.8770107626914978
+          ],
+          "n": 300,
+          "recall": 0.24666666666666667
+        },
+        {
+          "bin": 3,
+          "range": [
+            0.8770107626914978,
+            0.9577503204345703
+          ],
+          "n": 298,
+          "recall": 0.32550335570469796
+        },
+        {
+          "bin": 4,
+          "range": [
+            0.9577503204345703,
+            2.155296565102173
+          ],
+          "n": 300,
+          "recall": 0.09333333333333334
+        }
+      ]
+    },
+    "openai/gpt-4.1-mini": {
+      "RGB_DEPTH": [
+        {
+          "bin": 0,
+          "range": [
+            0.33687272667884827,
+            0.7384116649627686
+          ],
+          "n": 298,
+          "recall": 0.17785234899328858
+        },
+        {
+          "bin": 1,
+          "range": [
+            0.7384116649627686,
+            0.812336802482605
+          ],
+          "n": 298,
+          "recall": 0.2953020134228188
+        },
+        {
+          "bin": 2,
+          "range": [
+            0.812336802482605,
+            0.8770107626914978
+          ],
+          "n": 300,
+          "recall": 0.23333333333333334
+        },
+        {
+          "bin": 3,
+          "range": [
+            0.8770107626914978,
+            0.9577503204345703
+          ],
+          "n": 298,
+          "recall": 0.3187919463087248
+        },
+        {
+          "bin": 4,
+          "range": [
+            0.9577503204345703,
+            2.155296565102173
+          ],
+          "n": 300,
+          "recall": 0.09
+        }
+      ],
+      "RGB_FUSION_CAVITY": [
+        {
+          "bin": 0,
+          "range": [
+            0.33687272667884827,
+            0.7384116649627686
+          ],
+          "n": 298,
+          "recall": 0.1610738255033557
+        },
+        {
+          "bin": 1,
+          "range": [
+            0.7384116649627686,
+            0.812336802482605
+          ],
+          "n": 298,
+          "recall": 0.27181208053691275
+        },
+        {
+          "bin": 2,
+          "range": [
+            0.812336802482605,
+            0.8770107626914978
+          ],
+          "n": 300,
+          "recall": 0.26666666666666666
+        },
+        {
+          "bin": 3,
+          "range": [
+            0.8770107626914978,
+            0.9577503204345703
+          ],
+          "n": 298,
+          "recall": 0.31543624161073824
+        },
+        {
+          "bin": 4,
+          "range": [
+            0.9577503204345703,
+            2.155296565102173
+          ],
+          "n": 300,
+          "recall": 0.07333333333333333
+        }
+      ],
+      "RGB_SAJA": [
+        {
+          "bin": 0,
+          "range": [
+            0.33687272667884827,
+            0.7384116649627686
+          ],
+          "n": 298,
+          "recall": 0.17114093959731544
+        },
+        {
+          "bin": 1,
+          "range": [
+            0.7384116649627686,
+            0.812336802482605
+          ],
+          "n": 298,
+          "recall": 0.23825503355704697
+        },
+        {
+          "bin": 2,
+          "range": [
+            0.812336802482605,
+            0.8770107626914978
+          ],
+          "n": 300,
+          "recall": 0.22
+        },
+        {
+          "bin": 3,
+          "range": [
+            0.8770107626914978,
+            0.9577503204345703
+          ],
+          "n": 298,
+          "recall": 0.3087248322147651
+        },
+        {
+          "bin": 4,
+          "range": [
+            0.9577503204345703,
+            2.155296565102173
+          ],
+          "n": 300,
+          "recall": 0.08333333333333333
+        }
+      ]
+    },
+    "qwen/qwen3-7-plus": {
+      "RGB_DEPTH": [
+        {
+          "bin": 0,
+          "range": [
+            0.33687272667884827,
+            0.7384116649627686
+          ],
+          "n": 298,
+          "recall": 0.22483221476510068
+        },
+        {
+          "bin": 1,
+          "range": [
+            0.7384116649627686,
+            0.812336802482605
+          ],
+          "n": 298,
+          "recall": 0.32550335570469796
+        },
+        {
+          "bin": 2,
+          "range": [
+            0.812336802482605,
+            0.8770107626914978
+          ],
+          "n": 300,
+          "recall": 0.33
+        },
+        {
+          "bin": 3,
+          "range": [
+            0.8770107626914978,
+            0.9577503204345703
+          ],
+          "n": 298,
+          "recall": 0.32550335570469796
+        },
+        {
+          "bin": 4,
+          "range": [
+            0.9577503204345703,
+            2.155296565102173
+          ],
+          "n": 300,
+          "recall": 0.12
+        }
+      ],
+      "RGB_FUSION_CAVITY": [
+        {
+          "bin": 0,
+          "range": [
+            0.33687272667884827,
+            0.7384116649627686
+          ],
+          "n": 298,
+          "recall": 0.22818791946308725
+        },
+        {
+          "bin": 1,
+          "range": [
+            0.7384116649627686,
+            0.812336802482605
+          ],
+          "n": 298,
+          "recall": 0.3691275167785235
+        },
+        {
+          "bin": 2,
+          "range": [
+            0.812336802482605,
+            0.8770107626914978
+          ],
+          "n": 300,
+          "recall": 0.33
+        },
+        {
+          "bin": 3,
+          "range": [
+            0.8770107626914978,
+            0.9577503204345703
+          ],
+          "n": 298,
+          "recall": 0.37583892617449666
+        },
+        {
+          "bin": 4,
+          "range": [
+            0.9577503204345703,
+            2.155296565102173
+          ],
+          "n": 300,
+          "recall": 0.14333333333333334
+        }
+      ],
+      "RGB_SAJA": [
+        {
+          "bin": 0,
+          "range": [
+            0.33687272667884827,
+            0.7384116649627686
+          ],
+          "n": 298,
+          "recall": 0.21140939597315436
+        },
+        {
+          "bin": 1,
+          "range": [
+            0.7384116649627686,
+            0.812336802482605
+          ],
+          "n": 298,
+          "recall": 0.33557046979865773
+        },
+        {
+          "bin": 2,
+          "range": [
+            0.812336802482605,
+            0.8770107626914978
+          ],
+          "n": 300,
+          "recall": 0.28
+        },
+        {
+          "bin": 3,
+          "range": [
+            0.8770107626914978,
+            0.9577503204345703
+          ],
+          "n": 298,
+          "recall": 0.33221476510067116
+        },
+        {
+          "bin": 4,
+          "range": [
+            0.9577503204345703,
+            2.155296565102173
+          ],
+          "n": 300,
+          "recall": 0.13
+        }
+      ]
+    }
+  },
+  "recall_by_class": {
+    "google/gemini-3-flash|RGB_DEPTH": {
+      "human": {
+        "n": 528,
+        "recall": 0.6193181818181818
+      },
+      "artefak": {
+        "n": 304,
+        "recall": 0.10855263157894737
+      },
+      "animal": {
+        "n": 252,
+        "recall": 0.23809523809523808
+      },
+      "vegetation": {
+        "n": 224,
+        "recall": 0.20982142857142858
+      },
+      "building": {
+        "n": 98,
+        "recall": 0.25510204081632654
+      },
+      "decoration": {
+        "n": 88,
+        "recall": 0.09090909090909091
+      }
+    },
+    "google/gemini-3-flash|RGB_FUSION_CAVITY": {
+      "human": {
+        "n": 528,
+        "recall": 0.5852272727272727
+      },
+      "artefak": {
+        "n": 304,
+        "recall": 0.12828947368421054
+      },
+      "animal": {
+        "n": 252,
+        "recall": 0.17857142857142858
+      },
+      "vegetation": {
+        "n": 224,
+        "recall": 0.17410714285714285
+      },
+      "building": {
+        "n": 98,
+        "recall": 0.22448979591836735
+      },
+      "decoration": {
+        "n": 88,
+        "recall": 0.06818181818181818
+      }
+    },
+    "google/gemini-3-flash|RGB_SAJA": {
+      "human": {
+        "n": 528,
+        "recall": 0.5473484848484849
+      },
+      "artefak": {
+        "n": 304,
+        "recall": 0.12171052631578948
+      },
+      "animal": {
+        "n": 252,
+        "recall": 0.23015873015873015
+      },
+      "vegetation": {
+        "n": 224,
+        "recall": 0.17857142857142858
+      },
+      "building": {
+        "n": 98,
+        "recall": 0.22448979591836735
+      },
+      "decoration": {
+        "n": 88,
+        "recall": 0.045454545454545456
+      }
+    },
+    "openai/gpt-4.1|RGB_DEPTH": {
+      "human": {
+        "n": 528,
+        "recall": 0.48863636363636365
+      },
+      "artefak": {
+        "n": 304,
+        "recall": 0.05921052631578947
+      },
+      "animal": {
+        "n": 252,
+        "recall": 0.15873015873015872
+      },
+      "vegetation": {
+        "n": 224,
+        "recall": 0.125
+      },
+      "building": {
+        "n": 98,
+        "recall": 0.2857142857142857
+      },
+      "decoration": {
+        "n": 88,
+        "recall": 0.06818181818181818
+      }
+    },
+    "openai/gpt-4.1|RGB_FUSION_CAVITY": {
+      "human": {
+        "n": 528,
+        "recall": 0.5151515151515151
+      },
+      "artefak": {
+        "n": 304,
+        "recall": 0.04276315789473684
+      },
+      "animal": {
+        "n": 252,
+        "recall": 0.1626984126984127
+      },
+      "vegetation": {
+        "n": 224,
+        "recall": 0.13839285714285715
+      },
+      "building": {
+        "n": 98,
+        "recall": 0.25510204081632654
+      },
+      "decoration": {
+        "n": 88,
+        "recall": 0.06818181818181818
+      }
+    },
+    "openai/gpt-4.1|RGB_SAJA": {
+      "human": {
+        "n": 528,
+        "recall": 0.42045454545454547
+      },
+      "artefak": {
+        "n": 304,
+        "recall": 0.046052631578947366
+      },
+      "animal": {
+        "n": 252,
+        "recall": 0.1111111111111111
+      },
+      "vegetation": {
+        "n": 224,
+        "recall": 0.125
+      },
+      "building": {
+        "n": 98,
+        "recall": 0.25510204081632654
+      },
+      "decoration": {
+        "n": 88,
+        "recall": 0.07954545454545454
+      }
+    },
+    "openai/gpt-4.1-mini|RGB_DEPTH": {
+      "human": {
+        "n": 528,
+        "recall": 0.4772727272727273
+      },
+      "artefak": {
+        "n": 304,
+        "recall": 0.029605263157894735
+      },
+      "animal": {
+        "n": 252,
+        "recall": 0.09523809523809523
+      },
+      "vegetation": {
+        "n": 224,
+        "recall": 0.08928571428571429
+      },
+      "building": {
+        "n": 98,
+        "recall": 0.22448979591836735
+      },
+      "decoration": {
+        "n": 88,
+        "recall": 0.06818181818181818
+      }
+    },
+    "openai/gpt-4.1-mini|RGB_FUSION_CAVITY": {
+      "human": {
+        "n": 528,
+        "recall": 0.4791666666666667
+      },
+      "artefak": {
+        "n": 304,
+        "recall": 0.02631578947368421
+      },
+      "animal": {
+        "n": 252,
+        "recall": 0.07142857142857142
+      },
+      "vegetation": {
+        "n": 224,
+        "recall": 0.07142857142857142
+      },
+      "building": {
+        "n": 98,
+        "recall": 0.16326530612244897
+      },
+      "decoration": {
+        "n": 88,
+        "recall": 0.1590909090909091
+      }
+    },
+    "openai/gpt-4.1-mini|RGB_SAJA": {
+      "human": {
+        "n": 528,
+        "recall": 0.44886363636363635
+      },
+      "artefak": {
+        "n": 304,
+        "recall": 0.023026315789473683
+      },
+      "animal": {
+        "n": 252,
+        "recall": 0.09126984126984126
+      },
+      "vegetation": {
+        "n": 224,
+        "recall": 0.09375
+      },
+      "building": {
+        "n": 98,
+        "recall": 0.1326530612244898
+      },
+      "decoration": {
+        "n": 88,
+        "recall": 0.045454545454545456
+      }
+    },
+    "qwen/qwen3-7-plus|RGB_DEPTH": {
+      "human": {
+        "n": 528,
+        "recall": 0.5037878787878788
+      },
+      "artefak": {
+        "n": 304,
+        "recall": 0.12171052631578948
+      },
+      "animal": {
+        "n": 252,
+        "recall": 0.13095238095238096
+      },
+      "vegetation": {
+        "n": 224,
+        "recall": 0.12053571428571429
+      },
+      "building": {
+        "n": 98,
+        "recall": 0.2857142857142857
+      },
+      "decoration": {
+        "n": 88,
+        "recall": 0.056818181818181816
+      }
+    },
+    "qwen/qwen3-7-plus|RGB_FUSION_CAVITY": {
+      "human": {
+        "n": 528,
+        "recall": 0.5549242424242424
+      },
+      "artefak": {
+        "n": 304,
+        "recall": 0.08552631578947369
+      },
+      "animal": {
+        "n": 252,
+        "recall": 0.13095238095238096
+      },
+      "vegetation": {
+        "n": 224,
+        "recall": 0.18303571428571427
+      },
+      "building": {
+        "n": 98,
+        "recall": 0.32653061224489793
+      },
+      "decoration": {
+        "n": 88,
+        "recall": 0.07954545454545454
+      }
+    },
+    "qwen/qwen3-7-plus|RGB_SAJA": {
+      "human": {
+        "n": 528,
+        "recall": 0.4962121212121212
+      },
+      "artefak": {
+        "n": 304,
+        "recall": 0.09868421052631579
+      },
+      "animal": {
+        "n": 252,
+        "recall": 0.0992063492063492
+      },
+      "vegetation": {
+        "n": 224,
+        "recall": 0.11160714285714286
+      },
+      "building": {
+        "n": 98,
+        "recall": 0.35714285714285715
+      },
+      "decoration": {
+        "n": 88,
+        "recall": 0.09090909090909091
+      }
+    }
+  }
+}

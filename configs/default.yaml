@@ -1,0 +1,62 @@
+# Default configuration. Values here can be overridden by environment
+# variables (see .env.example) or CLI arguments; priority order:
+#     CLI argument > environment variable > this file > defaults in config.py
+
+# --------------------------------------------------------------------------
+# Locations
+# --------------------------------------------------------------------------
+# One folder per panel: <data_root>/<panel_id>/{rgb.png,depth.png,fusion.png,cavity.png,seg2.png}
+data_root: data/dataset
+output_root: outputs
+
+# --------------------------------------------------------------------------
+# File names inside each panel folder
+# --------------------------------------------------------------------------
+mask_name: seg2.png
+salience_name: cavity.png       # used for the relief-salience score
+photo_name: rgb.png             # used for visual audits
+min_area_px: 200                # from the annotation guidelines
+
+# --------------------------------------------------------------------------
+# Dev/test split
+# --------------------------------------------------------------------------
+# Freeze this seed before the first API call and record it in the paper.
+# Changing it after seeing results means the split is no longer independent.
+n_dev: 10
+seed: 20260913
+
+# --------------------------------------------------------------------------
+# Models
+# --------------------------------------------------------------------------
+# Uncomment granite to include it. The 2B model is expected to fail parsing
+# often; its failure rate is itself a reported result, not a bug.
+models:
+  - openai/gpt-4.1
+  - openai/gpt-4.1-mini
+  - google/gemini-3-flash
+  - qwen/qwen3-7-plus
+  # - ibm-granite/granite-vision-3.3-2b
+
+# --------------------------------------------------------------------------
+# Calls
+# --------------------------------------------------------------------------
+temperature: 0.0
+max_repairs: 1          # MUST be the same for every model, see README
+max_side: 1536          # longest side of the images sent, in pixels
+jpeg_quality: 90
+sleep_s: 3.0            # pause between calls, to avoid throttling
+timeout: 300            # per-prediction limit, in seconds
+max_retries: 2          # retries for transient errors
+upload_mode: files      # 'files' (Files API) or 'data_uri'
+save_predictions: true  # save the full Prediction object for each attempt
+
+# Safeguard against a misconfigured loop. null = no limit.
+# Example: 5000000 stops the run after 5 million tokens.
+max_tokens_total: null
+
+# --------------------------------------------------------------------------
+# Dataset source (optional)
+# --------------------------------------------------------------------------
+# If set, `relief fetch` can be run without arguments.
+drive_zip_url: null
+drive_folder_url: null

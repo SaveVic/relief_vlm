@@ -1,0 +1,28 @@
+# credentials
+.env
+.env.*
+!.env.example
+
+# data and results (the dataset may not be redistributed under the permit)
+data/
+outputs/
+figures/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp

@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "relief-vlm"
+version = "0.2.0"
+description = "Temple relief analysis with vision-language models: ground truth from segmentation masks, a Replicate call grid, and evaluation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Aufaclav Zatu Kusuma Frisky" },
+    { name = "Waffiq Maaroja" },
+    { name = "Humairah" },
+    { name = "Elva Amalia" },
+    { name = "Ihlasul Amal" },
+    { name = "Andi Dharmawan" },
+    { name = "Oskar Natan" },
+    { name = "Lukman Awaludin" },
+    { name = "Wahyono" },
+    { name = "Bakhtiar Alldino Ardi Sumbodo" },
+]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+
+dependencies = [
+    "replicate>=1.0.7,<2",
+    "pydantic>=2.6,<3",
+    "numpy>=1.24",
+    "opencv-python-headless>=4.8",
+    "Pillow>=10.0",
+    "httpx>=0.27",
+    "tqdm>=4.66",
+    "PyYAML>=6.0",
+    "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+# Dataset download from Google Drive.
+drive = ["gdown>=5.1"]
+# Plots for manual inspection and paper figures.
+viz = ["matplotlib>=3.7"]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+all = ["gdown>=5.1", "matplotlib>=3.7"]
+
+[project.scripts]
+relief = "relief.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
